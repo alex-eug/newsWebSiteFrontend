@@ -8,7 +8,7 @@ const FullNews = () => {
 
 
     const getArticles = () => {
-        return fetch("https://newsapi.org/v2/everything?q=apple&from=2022-09-12&to=2022-09-12&sortBy=popularity&apiKey=ade5773e72964d6a9b4889ad02a92802", {
+        return fetch("https://newsapi.org/v2/everything?q=apple&from=2022-09-12&to=2022-09-12&sortBy=popularity&apiKey=", {
             type: "GET",
         }).then((res) => res.json())
             .then(data => setArticles(data.articles))
