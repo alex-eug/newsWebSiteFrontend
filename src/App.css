@@ -32,7 +32,55 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.new-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #3f4758;
+}
+
+.article-container {
+  margin: 10px;
+  padding: 10px;
+  border: solid 2px antiquewhite;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-color: #282c34e2;
+  color: antiquewhite;
+}
+
+.article-date {
+  margin: 2px;
+  font-size: .8rem;
+}
+
+.article-source-name {
+  margin: 2px;
+}
+
+.article-author {
+  margin: 2px
+}
+
+.article-img {
+  border-radius: 10px;
+}
+
+.article-url a {
+  color: #d5ecf3;
+  text-decoration: none;
+}
+
+.article-url a:hover {
+  color: white;
 }
