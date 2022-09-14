@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <div>
-            <ul>
-                <li>recherche</li>
-                <li></li>
-                <li></li>
+        <header className="header-container">
+            <ul className="header-list">
+                <li className="header-item">lololo</li>
+                <li className="header-item">ertet</li>
+                <li className="header-item">rettert</li>
             </ul>
-        </div>
+        </header>
     )
 }

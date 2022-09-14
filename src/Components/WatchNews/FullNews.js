@@ -4,11 +4,12 @@ import CardNews from './CardNews';
 
 const FullNews = () => {
     const [articles, setArticles] = useState([])
+    const [keyWord, setKeyWord] = useState()
 
 
 
     const getArticles = () => {
-        return fetch("https://newsapi.org/v2/everything?q=EU&language=fr&from=2022-09-12&to=2022-09-12&sortBy=relevancy&apiKey=ade5773e72964d6a9b4889ad02a92802", {
+        return fetch("https://newsapi.org/v2/everything?q=macron&language=fr&from=2022-09-12&to=2022-09-12&sortBy=relevancy&apiKey=ade5773e72964d6a9b4889ad02a92802", {
             type: "GET",
         }).then((res) => res.json())
             .then(data => setArticles(data.articles))
@@ -18,10 +19,10 @@ const FullNews = () => {
         getArticles()
 
     }, [])
-    console.log(articles);
+
     return (
 
-        <div class="new-container">
+        <div className="new-container">
             {
                 articles.map((article) =>
                     <div key={uuidv4()}>

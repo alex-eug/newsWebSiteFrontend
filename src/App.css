@@ -38,34 +38,79 @@
   }
 }
 
+.main-title {
+  font-size: 3.5rem;
+  background: url("https://i.pinimg.com/236x/32/5c/df/325cdf40f82ced4a10f28e8548a7a68b.jpg");
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+.header-container {
+  background-color: #cbcbcb;
+  padding: 10px;
+}
+
+.header-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin: 0;
+}
+
+.header-item {
+  margin: 0 2px 0 2px;
+  padding: 5px;
+  list-style-type: none;
+}
+
 .new-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: #3f4758;
+  padding: 30px;
 }
 
 .article-container {
   margin: 10px;
-  padding: 10px;
-  border: solid 2px antiquewhite;
-  border-radius: 50px;
+  padding: 0px 10px 0 10px;
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   width: 400px;
   height: 400px;
   background-color: #282c34e2;
-  color: antiquewhite;
+  color: rgb(255, 255, 255);
+  transition: .3s;
+}
+
+.article-container:hover {
+  box-shadow: 5px 2px 2px rgb(1, 1, 1);
+  position: relative;
+  top: 2px;
+  background-color: #ffffff;
+  color: #282c34;
 }
 
 .article-date {
   margin: 2px;
-  font-size: .8rem;
+  font-size: .7rem;
 }
 
 .article-source-name {
+  font-size: 1.2rem;
+  padding: 5px;
   margin: 2px;
+  align-self: start;
+
+}
+
+.article-title {
+  font-size: 1.3rem;
 }
 
 .article-author {
@@ -77,10 +122,10 @@
 }
 
 .article-url a {
-  color: #d5ecf3;
+  color: #3bbbde;
   text-decoration: none;
 }
 
 .article-url a:hover {
-  color: white;
+  color: rgb(24, 31, 249);
 }

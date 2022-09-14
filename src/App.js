@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>Les news</h1>
+      <h1 className="main-title">Alex news</h1>
       <FullNews />
     </div>
   );
