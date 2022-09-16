@@ -135,3 +135,23 @@
 
   font-weight: bold;
 }
+
+.button-allArticles {
+  margin: 15px;
+  padding: 10px;
+  background-color: rgb(173, 175, 191);
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.search-container {
+  background-color: #61dafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-searchBar {
+  width: 20%;
+}
