@@ -38,46 +38,43 @@
   }
 }
 
-.main-title {
+.header {
   font-size: 3.5rem;
-  background: url("https://i.pinimg.com/236x/32/5c/df/325cdf40f82ced4a10f28e8548a7a68b.jpg");
+  background: url("https://img.freepik.com/photos-gratuite/homme-affaires-tenant-tablette-application-virtuelle_1112-775.jpg?size=626&ext=jpg&ga=GA1.2.2028433825.1664806220");
+  background-size: cover;
   color: #ffffff;
-  margin: 0;
-  padding: 20px;
-}
-
-.header-container {
-  background-color: #cbcbcb;
-  padding: 10px;
+  margin: 50px 0 0 0;
+  padding: 50px;
+  height: calc(100vh - 140px);
+  text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.header-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-
-  margin: 0;
+.main-title {
+  position: relative;
+  top: -150px;
+  background: linear-gradient(#eee, rgb(20, 34, 83));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.header-item {
-  margin: 0 2px 0 2px;
-  padding: 5px;
-  list-style-type: none;
-}
 
 .new-container {
+  margin: 130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #3f4758;
+  background: url("https://img.freepik.com/photos-gratuite/papier-peint-grille-numerique-degrade-bleu-marine_53876-104785.jpg?size=626&ext=jpg&ga=GA1.2.2028433825.1664806220");
+  background-size: auto;
   padding: 30px;
+  border-radius: 5px;
 }
 
 .article-container {
-  margin: 10px;
+  margin: 30px 30px;
   padding: 0px 10px 0 10px;
   border: solid 2px rgb(255, 255, 255);
   border-radius: 25px;
@@ -85,19 +82,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 400px;
-  height: 400px;
-  background-color: #282c34e2;
+  width: 300px;
+  height: 300px;
+  background:
+    linear-gradient(217deg, rgba(28, 12, 12, 0.8), rgba(255, 0, 0, 0.142) 70.71%),
+    linear-gradient(336deg, rgba(2, 2, 89, 0.8), rgba(0, 0, 255, 0.583) 70.71%);
   color: rgb(255, 255, 255);
   transition: .3s;
+  text-decoration: none;
 }
 
 .article-container:hover {
   box-shadow: 4px 2px 2px rgb(24, 24, 24);
   position: relative;
   top: 4px;
-  background-color: #e4e4e4;
-  color: #282c34;
+  background: #e4e4e4bc;
+  color: #000000;
 }
 
 .article-date {
@@ -107,6 +107,7 @@
 
 .article-source-name {
   font-size: 1.2rem;
+  font-weight: 300;
   padding: 5px;
   margin: 2px;
   align-self: start;
@@ -114,7 +115,9 @@
 }
 
 .article-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: auto;
 }
 
 .article-author {
@@ -122,18 +125,10 @@
 }
 
 .article-img {
-  border-radius: 10px;
-}
+  border-radius: 50px;
+  padding: 10px;
+  margin-top: 15px;
 
-.article-url a {
-  color: #282c34e2;
-  text-decoration: none;
-}
-
-
-.article-url a:hover {
-
-  font-weight: bold;
 }
 
 .button-allArticles {
@@ -145,13 +140,17 @@
   font-weight: 700;
 }
 
-.search-container {
-  background-color: #61dafb;
+.searchArea {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #000000;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0
 }
 
-.select-searchBar {
-  width: 20%;
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 0 15px 0 0;
 }

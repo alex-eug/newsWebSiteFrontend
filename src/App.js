@@ -1,6 +1,4 @@
-
-import { FullNews } from './Components'
-
+import { Footer, FullNews, Header } from './Components'
 import './App.css';
 
 function App() {
@@ -8,8 +6,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="main-title">Alex news</h1>
+      <Header />
       <FullNews />
+      <Footer />
     </div>
   );
 }
