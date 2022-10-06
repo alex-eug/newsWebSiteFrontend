@@ -11,8 +11,8 @@ export default function CardNews({ article }) {
                 <span> <time className="article-date">le {article.publishedAt.slice(0, 10)}</time></span>
             </p>
 
-            <div className="img-container"><img className="article-img" src={article.urlToImage} style={{ width: 150, height: 100 }} alt=" representant l'article" /></div>
-            <h3 className="article-title">{article.title.slice(0, 100) + '...'}</h3>
+            <div className="img-container"><img className="article-img" src={article.urlToImage} style={{ width: 100, height: 75 }} alt=" representant l'article" /></div>
+            <h3 className="article-title">{article.title.slice(0, 50) + '...'}</h3>
 
 
         </a>

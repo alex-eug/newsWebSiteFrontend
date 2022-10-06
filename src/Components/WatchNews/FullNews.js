@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import CardNews from './CardNews';
 import SearchByKeyWord from './SearchByKeyWord';
@@ -40,12 +40,14 @@ const FullNews = () => {
         setLanguage(e.value)
         setLanguageLabel(e.label)
     }
-
+    // var q et le champs controllé de l'input var v et sa valeur soumis au click pour la recherche
+    const [q, setQ] = useState("foot")
+    const [v, setV] = useState('rugby')
 
     useEffect(() => {
         // console.log("allArticles", allArticles);
         if (allArticles) {
-            fetch(`https://newsapi.org/v2/everything?q=rugby&language=${language}&apiKey=ade5773e72964d6a9b4889ad02a92802`, {
+            fetch(`https://newsapi.org/v2/everything?q=${v}&language=${language}&apiKey=ade5773e72964d6a9b4889ad02a92802`, {
                 type: "GET",
             }).then((res) => res.json())
                 .then(data => setArticles(data.articles))
@@ -56,10 +58,17 @@ const FullNews = () => {
             }).then((res) => res.json())
                 .then(data => setArticles(data.articles))
         }
-    }, [allArticles, language])
+    }, [allArticles, language, v])
 
-
-
+    const onChangeQ = (e) => {
+        setQ(e.target.value)
+    }
+    console.log("qqqqqqqqqqqqqq", q);
+    const onClickQ = (e) => {
+        e.preventDefault()
+        setV(q)
+    }
+    console.log("vvvvvvvvvvvvvv", v);
     return (
         <div>
             <div className='searchArea'>
@@ -70,13 +79,14 @@ const FullNews = () => {
                     options={options}
                     language={language}
                     handleChange={handleChange}
-
                     optionCategory={optionCategory}
-
                     languageLabel={languageLabel}
                 />
                 {
-                    allArticles ? <SearchByKeyWord /> : ""
+                    allArticles ? <SearchByKeyWord
+                        onChangeQ={onChangeQ}
+                        onClickQ={onClickQ}
+                    /> : ""
                 }
             </div>
             <div className="new-container">

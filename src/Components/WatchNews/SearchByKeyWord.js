@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default function SearchByKeyWord() {
+export default function SearchByKeyWord({ onClickQ, onChangeQ }) {
+
     return (
         <div className='search-container'>
-            <input type="text" name="" id="" />
-            <button className='button-allArticles'>Rechercher</button>
+            <form action="">
+                <input className='search-input' type="text" name="q" id="" onChange={(e) => { onChangeQ(e) }} placeholder="rugby" />
+                <button className='button-allArticles' onClick={(e) => { onClickQ(e) }}>Rechercher</button>
+            </form>
         </div>
     )
 }

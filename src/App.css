@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #000000;
 }
 
 .App-logo {
@@ -63,7 +64,7 @@
 
 
 .new-container {
-  margin: 130px;
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,7 +75,7 @@
 }
 
 .article-container {
-  margin: 30px 30px;
+  margin: 20px 10px;
   padding: 0px 10px 0 10px;
   border: solid 2px rgb(255, 255, 255);
   border-radius: 25px;
@@ -82,8 +83,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 200px;
   background:
     linear-gradient(217deg, rgba(28, 12, 12, 0.8), rgba(255, 0, 0, 0.142) 70.71%),
     linear-gradient(336deg, rgba(2, 2, 89, 0.8), rgba(0, 0, 255, 0.583) 70.71%);
@@ -115,7 +116,7 @@
 }
 
 .article-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: auto;
 }
@@ -125,9 +126,9 @@
 }
 
 .article-img {
-  border-radius: 50px;
+  border-radius: 25px;
   padding: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
 
 }
 
@@ -140,8 +141,15 @@
   font-weight: 700;
 }
 
+.button-allArticles:hover {
+
+  background-color: rgba(173, 175, 191, 0.842);
+}
+
 .searchArea {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   background: #000000;
   position: fixed;
   width: 100%;
@@ -152,5 +160,20 @@
 .search-container {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin: 0 15px 0 0;
+  width: 50%;
+}
+
+.search-input {
+  font-size: 1.1rem;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #61dafb;
+}
+
+.footer {
+  color: #ffffff;
+  padding: 20px;
+  background-color: #1b22d8;
 }
