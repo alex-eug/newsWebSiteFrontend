@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import CardNews from './CardNews';
 import SearchByKeyWord from './SearchByKeyWord';
@@ -47,13 +47,13 @@ const FullNews = () => {
     useEffect(() => {
         // console.log("allArticles", allArticles);
         if (allArticles) {
-            fetch(`https://newsapi.org/v2/everything?q=${v}&language=${language}&apiKey=ade5773e72964d6a9b4889ad02a92802`, {
+            fetch(`https://newsapi.org/v2/everything?q=${v}&language=${language}&sortBy=publishedAt&apiKey=ade5773e72964d6a9b4889ad02a92802`, {
                 type: "GET",
             }).then((res) => res.json())
                 .then(data => setArticles(data.articles))
 
         } else {
-            fetch(`https://newsapi.org/v2/top-headlines?language=${language}&apiKey=ade5773e72964d6a9b4889ad02a92802`, {
+            fetch(`https://newsapi.org/v2/top-headlines?language=${language}&sortBy=publishedAt&apiKey=ade5773e72964d6a9b4889ad02a92802`, {
                 type: "GET",
             }).then((res) => res.json())
                 .then(data => setArticles(data.articles))

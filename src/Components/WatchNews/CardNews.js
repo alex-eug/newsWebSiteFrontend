@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function CardNews({ article }) {
-
+    console.log(article.urlToImage);
 
     return (
 
@@ -11,7 +11,7 @@ export default function CardNews({ article }) {
                 <span> <time className="article-date">le {article.publishedAt.slice(0, 10)}</time></span>
             </p>
 
-            <div className="img-container"><img className="article-img" src={article.urlToImage} style={{ width: 100, height: 75 }} alt=" representant l'article" /></div>
+            <div className="img-container"><img className="article-img" src={article.urlToImage ? article.urlToImage : 'https://img.freepik.com/photos-gratuite/homme-affaires-tenant-tablette-application-virtuelle_1112-775.jpg?size=626&ext=jpg&ga=GA1.2.2028433825.1664806220'} style={{ width: 160, height: 110 }} alt=" representant l'article" /></div>
             <h3 className="article-title">{article.title.slice(0, 50) + '...'}</h3>
 
 
