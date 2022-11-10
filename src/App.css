@@ -39,6 +39,7 @@
   }
 }
 
+/*header & title */
 .header {
   font-size: 3.5rem;
   background: url("https://img.freepik.com/photos-gratuite/homme-affaires-tenant-tablette-application-virtuelle_1112-775.jpg?size=626&ext=jpg&ga=GA1.2.2028433825.1664806220");
@@ -62,7 +63,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* meteo */
 
+.meteo-card {
+  background-color: white;
+}
+
+/*full news */
 .new-container {
   margin: 10px;
   display: flex;
@@ -146,6 +153,7 @@
   background-color: rgba(173, 175, 191, 0.842);
 }
 
+/*searchbar and search area*/
 .searchArea {
   display: flex;
   align-items: center;
@@ -172,8 +180,13 @@
   background-color: #61dafb;
 }
 
+/*footer*/
 .footer {
   color: #ffffff;
   padding: 20px;
   background-color: #1b22d8;
+}
+
+p {
+  color: #eee;
 }

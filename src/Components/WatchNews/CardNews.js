@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function CardNews({ article }) {
-    console.log(article.urlToImage);
+
 
     return (
 

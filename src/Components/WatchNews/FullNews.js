@@ -6,6 +6,8 @@ import SearchByKeyWord from './SearchByKeyWord';
 import { SearchBar } from '..';
 
 const FullNews = () => {
+
+
     const [articles, setArticles] = useState([])
     const [allArticles, setAllArticles] = useState(true)
 
@@ -42,7 +44,7 @@ const FullNews = () => {
     }
     // var q et le champs controllé de l'input var v et sa valeur soumis au click pour la recherche
     const [q, setQ] = useState("foot")
-    const [v, setV] = useState('rugby')
+    const [v, setV] = useState('foot')
 
     useEffect(() => {
         // console.log("allArticles", allArticles);
@@ -58,17 +60,19 @@ const FullNews = () => {
             }).then((res) => res.json())
                 .then(data => setArticles(data.articles))
         }
+
+
     }, [allArticles, language, v])
 
     const onChangeQ = (e) => {
         setQ(e.target.value)
     }
-    console.log("qqqqqqqqqqqqqq", q);
+
     const onClickQ = (e) => {
         e.preventDefault()
         setV(q)
     }
-    console.log("vvvvvvvvvvvvvv", v);
+
     return (
         <div>
             <div className='searchArea'>

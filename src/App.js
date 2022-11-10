@@ -1,4 +1,4 @@
-import { Footer, FullNews, Header } from './Components'
+import { Footer, FullNews, Header, MeteoCard } from './Components'
 import './App.css';
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <FullNews />
+      <MeteoCard />
+      { /* <FullNews />*/}
       <Footer />
     </div>
   );
